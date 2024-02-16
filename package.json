@@ -1,0 +1,15 @@
+{
+  "name": "node-ts-template",
+  "version": "0.0.1",
+  "description": "A Node.js template for using TypeScript with ts-node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "pnpm"
+  ],
+  "author": "Will Walsh",
+  "license": "ISC"
+}
