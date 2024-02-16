@@ -1,16 +1,17 @@
 {
   "name": "node-ts-template",
-  "version": "0.0.2",
-  "description": "A Node.js template for using TypeScript with NodeJS",
+  "version": "0.0.3",
+  "description": "A Node.js template for using TypeScript/ts-node with NodeJS",
   "main": "dist/index.js",
   "scripts": {
     "build": "pnpm tsc",
-    "start": "node ./dist/index.js",
+    "start": "ts-node ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "node",
     "pnpm",
+    "ts-node",
     "typescript"
   ],
   "author": "Will Walsh",
@@ -19,6 +20,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19"
+    "@types/node": "^20.11.19",
+    "ts-node": "^10.9.2"
   }
 }
