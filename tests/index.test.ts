@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import { add } from '../src/index';
 
 describe('testing index file', () => {
