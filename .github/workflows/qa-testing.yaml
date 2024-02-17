@@ -1,13 +1,13 @@
-name: lint
+name: Quality Assurance Testing
 on:
   push:
-    branches: ["develop"]
+    branches: ['develop']
   pull_request:
-    branches: ["develop"]
+    branches: ['develop']
   workflow_dispatch:
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,7 +15,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
-      
+
       - run: npm install --global pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm lint
+      - run: pnpm fix
+      - run: pnpm test
+      - run: pnpm build
