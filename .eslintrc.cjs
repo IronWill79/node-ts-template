@@ -2,10 +2,10 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   extends: [
-    "plugin:prettier/recommended",
-    "prettier",
-    "eslint:recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
+    "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended",
   ],
   plugins: ["@typescript-eslint/eslint-plugin"],
   parserOptions: {
@@ -19,12 +19,13 @@ module.exports = {
   },
   root: true,
   rules: {
-    "no-var": "error",
-    semi: "error",
     indent: ["error", 2, { SwitchCase: 1 }],
-    "no-multi-spaces": "error",
-    "space-in-parens": "error",
+    "no-console": "warn",
     "no-multiple-empty-lines": "error",
+    "no-multi-spaces": "error",
+    "no-var": "error",
     "prefer-const": "error",
+    semi: "error",
+    "space-in-parens": "error",
   },
 };
