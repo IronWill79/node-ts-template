@@ -1,23 +1,24 @@
 /* eslint-env node */
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  extends: [
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'eslint:recommended',
-    'prettier',
-    'plugin:prettier/recommended',
-  ],
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  parserOptions: {
-    ecmaVersion: 2022,
-    sourceType: 'module',
-    project: 'tsconfig.json',
-  },
   env: {
     es6: true,
     jest: true,
     node: true,
   },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:prettier/recommended',
+    'prettier',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2022,
+    sourceType: 'module',
+    project: 'tsconfig.eslint.json',
+  },
+  plugins: ['@typescript-eslint/eslint-plugin'],
   root: true,
   rules: {
     indent: ['error', 2, { SwitchCase: 1 }],
@@ -31,8 +32,8 @@ module.exports = {
   },
   overrides: [
     {
-      extends: ['plugin:@typescript-eslint/disable-type-checked'],
-      files: ['./**/*.js'],
+      files: ['tests/**/*.ts'],
+      env: { jest: true, node: true },
     },
   ],
 };
