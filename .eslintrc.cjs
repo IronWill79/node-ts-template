@@ -20,7 +20,7 @@ module.exports = {
   root: true,
   rules: {
     indent: ["error", 2, { SwitchCase: 1 }],
-    "no-console": "warn",
+    "no-console": 0,
     "no-multiple-empty-lines": "error",
     "no-multi-spaces": "error",
     "no-var": "error",
