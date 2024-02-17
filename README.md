@@ -25,7 +25,7 @@
 1. Run `pnpm i` to setup node_modules
 1. Run `pnpm build` to build to the `dist/` folder
 1. Run `pnpm start` to run the `src/index.ts` file using `ts-node`
-1. Run `pnpm run dev` to start `nodemon` running the project using `ts-node` to watch for `*.ts` file changes
+1. Run `pnpm dev` to start `nodemon` running the project using `ts-node` to watch for `*.ts` file changes
 1. Run `pnpm lint` to lint the files
 1. Run `pnpm fix` to lint the files and fix the issues
 1. Run `pnpm test` to run tests
